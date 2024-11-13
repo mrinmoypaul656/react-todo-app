@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { TaskProvider } from './context/TaskContext';
+import TaskList from './components/TaskList';
+import TaskFilter from './components/TaskFilter';
+import SearchBar from './components/SearchBar';
+import './styles.css'; 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TaskProvider>
+      <div>
+        <h1>Task Manager</h1>
+        <SearchBar />
+        <TaskFilter />
+        <TaskList />
+      </div>
+    </TaskProvider>
   );
-}
+};
 
 export default App;

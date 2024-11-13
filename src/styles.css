@@ -1,0 +1,179 @@
+/* Global Styles */
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+body {
+        font-family: Arial, sans-serif;
+        background-color: #d0eac8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #333;
+}
+
+h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #333;
+}
+
+.container {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+}
+
+@media (min-width: 768px) {
+        .container {
+                max-width: 900px;
+        }
+}
+
+/* Title */
+.title {
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+}
+
+/* Search Bar */
+.search-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+}
+
+.search-container input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.9rem;
+}
+
+/* Filter Buttons */
+.filters {
+        display: flex;
+        gap: 10px;
+}
+
+.filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+}
+
+.filter-btn.active {
+        background-color: #5ab03e;
+        color: white;
+}
+
+.filter-btn:not(.active) {
+        background-color: #e0e0e0;
+        color: #555;
+}
+
+/* Task List */
+.task-list {
+        list-style: none;
+        margin-top: 20px;
+        padding: 0;
+}
+
+.task-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        background-color: #f9f9f9;
+}
+
+.task-item.completed {
+        background-color: #e6f5e3;
+        text-decoration: line-through;
+        color: #777;
+}
+
+.task-item .task-text {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+}
+
+/* Task Buttons */
+.task-actions {
+        display: flex;
+        gap: 10px;
+}
+
+.delete-btn,
+.complete-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+}
+
+.delete-btn {
+        color: #d9534f;
+}
+
+.complete-btn {
+        color: #5cb85c;
+}
+
+/* Add Task Input */
+.add-task-container {
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+}
+
+.add-task-container input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.9rem;
+}
+
+.add-task-container button {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+        .container {
+                max-width: 100%;
+                padding: 15px;
+        }
+
+        .title {
+                font-size: 1.2rem;
+        }
+
+        .task-item {
+                font-size: 0.85rem;
+        }
+}
